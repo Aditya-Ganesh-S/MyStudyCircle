@@ -7,12 +7,15 @@ const router = express.Router();
 
 router.route('/')
 .get(  courseController.getAllCourses)
-.post(authCtrl.requireSignin, courseController.addCourse)
+.post( courseController.addCourse)
 
 router.route('/:courseId')
-.get(authCtrl.requireSignin, courseController.getOneCourse)
-.put(authCtrl.requireSignin, courseController.updateCourse)
+.get( courseController.getOneCourse)
+.put( courseController.updateCourse)
 .delete(courseController.deleteCourse)
+
+router.route('/mycourses/:userId')
+.get(courseController.getMyCourses)
 
 router.route('/:courseId/:lessonId')
 .delete(courseController.deleteLesson);

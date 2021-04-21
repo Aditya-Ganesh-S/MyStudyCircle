@@ -1,7 +1,6 @@
 import react from "react";
-import "./courses.scss";
-import SingleCourseCard from "./singleCourseCard";
-
+import "./DeleteCourse.scss";
+import UpdateCourseComponent from './UpdateCourseComponent';
 class Courses extends react.Component {
   constructor() {
     super();
@@ -23,7 +22,7 @@ class Courses extends react.Component {
 
   render() {
     const singleCourseComponents = this.state.coursesData.map((course) => (
-      <SingleCourseCard key={course._id} course={course}></SingleCourseCard>
+      <UpdateCourseComponent key={course._id} course={course}></UpdateCourseComponent>
     ));
 
     return (

@@ -1,73 +1,31 @@
 @import '../scss/main.scss';
 
-.section-newLesson-container {
-    padding: 5rem 0;
+.section-newCourse-container {
+    margin-top: 3rem;
+    padding: 10rem 0;
     background-image: linear-gradient(to right bottom, rgba(31, 31, 131, 0.8), rgba(86, 181, 248, 0.8));
 }
 
-.section-newLesson-box {
-    padding: 2rem;
+.section-newCourse-box {
+    padding: 4rem;
     margin: auto;
-    max-width: 55rem;
+    max-width: 60rem;
     background-color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 2rem;
 
 }
 
-.section-newLesson-image {
-    background-image: url('../images/nc8.jpg');
-    // background-size: auto;
-    background-repeat: no-repeat;
-    height: 25rem;
-    background-position: top;
-    position: relative;
-    transform: scale(1);
-    border-radius: 2rem;
-
-    &:hover+&-caption {
-        opacity: 1;
-        transition: all 0.5s;
-
-        transform: translate(-50%, -200%);
-    }
-
-    &:hover {
-        transition: all 0.5s;
-        transform: scale(0.9);
-        filter: blur(2px) brightness(80%);
-    }
 
 
-}
-
-.section-newLesson-image-caption {
-    font-size: 1.7rem;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    display: inline-block;
-    color: white;
-    letter-spacing: 5px;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 300%);
-    opacity: 0;
-
-}
-
-.overlay {
-    margin-bottom: 4rem;
-}
-
-.section-newLesson-heading {
+.section-newCourse-heading {
     text-align: center;
 }
 
 
-.heading-secondary-newLesson {
+
+
+.heading-secondary-newCourse {
     font-size: 1.7rem;
     font-weight: 700;
     text-align: center;
@@ -118,23 +76,29 @@
 
 }
 
-.btn-text-red {
+// .btn-text-red {
+//     @extend .btn-text-green;
+//     margin-right: 0px;
+//     outline: none;
+// }
+
+.btn-text-addCourse {
     @extend .btn-text-green;
-    margin-right: 0px;
+    // margin-top: -rem;
+    // margin-left: 35rem;
     outline: none;
 }
 
-.btn-text-add {
-    @extend .btn-text-green;
-    margin-left: 39rem;
-    outline: none;
-}
-
-.section-newLesson-editableOptions {
+.section-newCourse-editableOptions {
     margin-top: -1rem;
 }
 
-.editable-newLesson {
+.section-newCourse-editable {
+    margin-top: -1rem;
+    text-align: center;
+}
+
+.editable-newCourse {
     // display: none;
     margin: auto;
     margin-top: 2rem;
@@ -178,4 +142,10 @@
     background-image: linear-gradient(to right, $secondary-color, $primary-color);
     -webkit-background-clip: text;
     color: transparent;
+}
+
+.flexButton{
+    display: flex;
+    margin-left: 5rem;
+    justify-content: space-between;
 }

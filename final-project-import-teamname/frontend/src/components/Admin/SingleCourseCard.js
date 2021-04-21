@@ -1,10 +1,23 @@
 import react from "react";
-import "./courses.scss";
+import "./DeleteCourse.scss";
 import { Link } from "react-router-dom";
+
 class SingleCourseCard extends react.Component {
-  componentWillMount() {
-    console.log(this.props.course);
-  }
+  
+    deleteCourse= id => event =>  {
+        event.preventDefault();
+        let requestHeaders = {
+          method: 'DELETE'
+        };
+        fetch('http://localhost:9000/app/courses/' + id, requestHeaders)
+          .then(response => response.text())
+          .then(res => {
+            alert("Deleted Successfully ", res);
+            window.location.reload();
+          })
+          .catch(error => alert("Cannot delete Course item ", error));
+      }
+    
 
   render() {
     return (
@@ -22,13 +35,15 @@ class SingleCourseCard extends react.Component {
                 <ul>
                 <li>{this.props.course.description}</li>
                   <li>{this.props.course.category}</li>
-                  <li>{this.props.course.created.toLocaleString()}</li>
+                  <li>{this.props.course.created}</li>
+                  <li>{this.props.course.Instructor}</li>
                 </ul>
               </div>
             </div>
             <div class="card__side card__side--back card__side--back-1">
               <button class="card__cta">
-                <Link to={`courses/${this.props.course._id}`}>Study Now!</Link>
+                  <button onClick={this.deleteCourse(this.props.course._id)}>Delete</button>
+                {/* <Link to={`courses/${this.props.course._id}`}>Delete</Link> */}
               </button>
             </div>
           </div>

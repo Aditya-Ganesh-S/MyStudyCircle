@@ -93,7 +93,7 @@ class MyProfileEditForm extends react.Component {
                     <br></br>
                     <br></br>
                     {/* <BecomeInstructor /> */}
-                    <div>
+                    {/* <div>
                         <h1 className="heading-secondary-profile instructor">Do you want to become an Instructor</h1>
                         <div className="radio-group">
                             <input type="radio" className="radio-input" id="yes" value="yes" name="instructor" onChange={this.onChangeValue}></input>
@@ -109,7 +109,7 @@ class MyProfileEditForm extends react.Component {
                         No
                     </label>
                         </div>
-                    </div>
+                    </div> */}
                     <button className="btn-text-blue">Update</button>
 
                 </form>

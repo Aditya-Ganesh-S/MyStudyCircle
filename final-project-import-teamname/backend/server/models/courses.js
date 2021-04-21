@@ -6,6 +6,9 @@ const LessonSchema = new mongoose.Schema({
     resource_url: String
 })
 
+let d = new Date();
+const date = d.toLocaleDateString();
+
 const Lesson = mongoose.model('Lesson', LessonSchema)
 const courseSchema = new mongoose.Schema({
     name: {
@@ -27,12 +30,17 @@ const courseSchema = new mongoose.Schema({
     },
 
     created: {
-        type: Date,
-        default: Date.now
-    },
-    instructor: {
         type: String,
+        default: date
     },
+    instructorName:{
+        type:String
+    },
+    role:{
+        type:String,
+        default:"student"
+    },
+    instructor: {type: mongoose.SchemaTypes.ObjectId, ref: 'User'},
     lessons: [LessonSchema]
 },
     {

@@ -2,13 +2,13 @@
 
 .section-newCourse-container {
     padding: 10rem 0;
-    background-image: linear-gradient(to right bottom, rgba(31, 31, 131, 0.8), rgba(86, 181, 248, 0.8)), url('../images/headerImage.jpeg');
+    background-image: linear-gradient(to right bottom, rgba(31, 31, 131, 0.8), rgba(86, 181, 248, 0.8));
 }
 
 .section-newCourse-box {
     padding: 4rem;
     margin: auto;
-    max-width: 55rem;
+    max-width: 60rem;
     background-color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 2rem;
@@ -84,7 +84,7 @@
 .btn-text-addCourse {
     @extend .btn-text-green;
     // margin-top: -rem;
-    margin-left: 35rem;
+    // margin-left: 35rem;
     outline: none;
 }
 
@@ -141,4 +141,10 @@
     background-image: linear-gradient(to right, $secondary-color, $primary-color);
     -webkit-background-clip: text;
     color: transparent;
+}
+
+.flexButton{
+    display: flex;
+    margin-left: 5rem;
+    justify-content: space-between;
 }

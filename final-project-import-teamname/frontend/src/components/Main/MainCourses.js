@@ -1,11 +1,9 @@
 import react from 'react';
 import './MainCourses.scss';
-
+import {Link} from 'react-router-dom'
 import img1 from '../images/block_chain.jpg';
 import img2 from '../images/machine_learning.jpg';
 import img3 from '../images/mern.jpg';
-import { Link } from 'react-router-dom';
-
 
 class MainCourses extends react.Component {
 
@@ -34,9 +32,7 @@ class MainCourses extends react.Component {
                     </div>
                 </div>
                 <div class="center">
-                    <Link>
-                        <li class="btn-text">Enroll Now &rarr;</li>
-                    </Link>
+                    <Link to="/courses" class="btn-text">Study Now &rarr;</Link>
 
                 </div>
             </div>

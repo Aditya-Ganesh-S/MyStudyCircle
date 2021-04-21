@@ -1,10 +1,23 @@
 import react from "react";
-import "./courses.scss";
+import "./DeleteCourse.scss";
 import { Link } from "react-router-dom";
-class SingleCourseCard extends react.Component {
-  componentWillMount() {
-    console.log(this.props.course);
-  }
+
+class UpdateCourseCard extends react.Component {
+  
+    updateCourse= id => event =>  {
+        event.preventDefault();
+        let requestHeaders = {
+          method: 'PUT'
+        };
+        fetch('http://localhost:9000/app/courses/' + id, requestHeaders)
+          .then(response => response.text())
+          .then(res => {
+            alert("Updated Successfully ", res);
+            window.location.reload();
+          })
+          .catch(error => alert("Cannot Update Course item ", error));
+      }
+    
 
   render() {
     return (
@@ -22,13 +35,15 @@ class SingleCourseCard extends react.Component {
                 <ul>
                 <li>{this.props.course.description}</li>
                   <li>{this.props.course.category}</li>
-                  <li>{this.props.course.created.toLocaleString()}</li>
+                  <li>{this.props.course.created}</li>
+                  <li>{this.props.course.Instructor}</li>
                 </ul>
               </div>
             </div>
             <div class="card__side card__side--back card__side--back-1">
               <button class="card__cta">
-                <Link to={`courses/${this.props.course._id}`}>Study Now!</Link>
+                  {/* <button onClick={this.updateCourse(this.props.course._id)}>Update</button> */}
+                <Link to={`/update/${this.props.course._id}`}>Update</Link>
               </button>
             </div>
           </div>
@@ -38,4 +53,4 @@ class SingleCourseCard extends react.Component {
   }
 }
 
-export default SingleCourseCard;
+export default UpdateCourseCard;

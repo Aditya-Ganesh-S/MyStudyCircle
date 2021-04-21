@@ -11,7 +11,7 @@ class Header extends react.Component {
 
                 <div class="text-bo">
                     <h1 class="heading-primary">
-                        <span class="heading-primary-main">Project Title</span>
+                        <span class="heading-primary-main">my Study circle</span>
                         <span class="heading-primary-sub">A New Era of Free Virtual Learning</span>
                     </h1>
                 </div>

@@ -1,6 +1,6 @@
 import react from "react";
-import "./courses.scss";
-import SingleCourseCard from "./singleCourseCard";
+import "./DeleteCourse.scss";
+import SingleCourseCard from "./SingleCourseCard";
 
 class Courses extends react.Component {
   constructor() {
@@ -44,7 +44,11 @@ class Courses extends react.Component {
           </div>
           <div className="flexbox">{singleCourseComponents}</div>
 
-          
+          <div class="u-center-text u-margin-top-huge">
+            <a href="#" class="btn btn--green">
+              Discover all courses
+            </a>
+          </div>
         </section>
       </div>
     );

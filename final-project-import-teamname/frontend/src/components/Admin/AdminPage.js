@@ -1,8 +1,8 @@
 import react, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './AddNewCourse.scss';
+import './AdminPage.scss';
 
-class AddCourse extends react.Component {
+class AdminPage extends react.Component {
 
     render() {
         return (
@@ -13,9 +13,9 @@ class AddCourse extends react.Component {
                         <h1 className="heading-secondary-newCourse">Manage Courses</h1>
                     </div>
                     <div className="flexButtons">
-                        <Link to="/addNewCourseItem" className="btn-text-addCourse">Add Course</Link>
+                        <Link to="/admin/add" className="btn-text-addCourse">Add Course</Link>
                         <Link to="/admin/delete" className="btn-text-addCourse">Delete Course</Link>
-                        <Link to="/addNewCourseItem" className="btn-text-addCourse">update Course</Link>
+                        <Link to="/admin/update" className="btn-text-addCourse">update Course</Link>
                     </div>
 
 
@@ -27,4 +27,4 @@ class AddCourse extends react.Component {
     }
 }
 
-export default AddCourse;
+export default AdminPage;

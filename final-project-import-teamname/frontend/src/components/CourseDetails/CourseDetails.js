@@ -74,11 +74,10 @@ function CourseDetails({match}){
                          <h1 className="heading-secondary-Course">{course.name}</h1>
                      </div>
                      <div className="section-Course-editable">
-                         <p className="para">Professor</p>
+                         <p className="para">{course.instructorName}</p>
                          <p className="para">jadfkalsdjfklj</p>
                      </div>
                      <br></br>
-                     <p className="para">Students Enrolled</p>
 
                      {/* {Render lessons of that course over here} */}
                  </div>

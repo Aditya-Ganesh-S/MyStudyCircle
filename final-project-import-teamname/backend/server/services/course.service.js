@@ -27,6 +27,13 @@ const updateCourse = (id, courseName, description, category, lessons) =>{
     return promise;
 }
 
+const getMyCourses = (id) => {
+    const promise = Course.find({
+        instructor:id
+    }).exec()
+    return promise;
+}
+
 const deleteCourse = (id)=> {
     const promise= Course.findByIdAndRemove({
         _id: id 
@@ -46,6 +53,7 @@ export default {
     save:save,
     getOneCourse:getOneCourse,
     updateCourse:updateCourse,
-    deleteCourse:deleteCourse
+    deleteCourse:deleteCourse,
+    getMyCourses:getMyCourses
     // deleteLesson:deleteLesson
 }

@@ -1,11 +1,12 @@
 @import '../scss/main.scss';
 
-.section-newLesson-container {
+.section-CourseItem-container {
     padding: 5rem 0;
     background-image: linear-gradient(to right bottom, rgba(31, 31, 131, 0.8), rgba(86, 181, 248, 0.8));
+    // background-image: linear-gradient(to right bottom,rgb(31, 31, 131 ), #56B5F8);
 }
 
-.section-newLesson-box {
+.section-CourseItem-box {
     padding: 2rem;
     margin: auto;
     max-width: 55rem;
@@ -15,7 +16,7 @@
 
 }
 
-.section-newLesson-image {
+.section-CourseItem-image {
     background-image: url('../images/nc8.jpg');
     // background-size: auto;
     background-repeat: no-repeat;
@@ -41,7 +42,7 @@
 
 }
 
-.section-newLesson-image-caption {
+.section-CourseItem-image-caption {
     font-size: 1.7rem;
     font-weight: 700;
     text-align: center;
@@ -62,12 +63,12 @@
     margin-bottom: 4rem;
 }
 
-.section-newLesson-heading {
+.section-CourseItem-heading {
     text-align: center;
 }
 
 
-.heading-secondary-newLesson {
+.heading-secondary-CourseItem {
     font-size: 1.7rem;
     font-weight: 700;
     text-align: center;
@@ -87,7 +88,7 @@
     }
 }
 
-.flex-box {
+.flex-box1 {
     display: flex;
     justify-content: space-between;
 }
@@ -130,11 +131,11 @@
     outline: none;
 }
 
-.section-newLesson-editableOptions {
+.section-CourseItem-editableOptions {
     margin-top: -1rem;
 }
 
-.editable-newLesson {
+.editable-AddCourse {
     // display: none;
     margin: auto;
     margin-top: 2rem;
