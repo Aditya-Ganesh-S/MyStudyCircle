@@ -38,7 +38,6 @@ function MyProfile({match}) {
 
                     <div className="section-myProfile-editableOptions">
                         <button className="btn-text-green" onClick={() => setIsOpen(!isOpen)}>Edit</button>
-                        <button className="btn-text-red">Delete</button>
                     </div>
                 </div>
                 {isOpen && (
