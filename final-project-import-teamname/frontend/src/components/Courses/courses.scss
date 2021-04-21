@@ -111,8 +111,7 @@ $gutter-horizontal: 6rem;
       &-1 {
         background-image: linear-gradient(
           to right bottom,
-          $color-secondary-light,
-          $color-grey-dark
+          rgba(31,31,131,0.8), rgba(86,181,248,0.8)
         );
       }
     }
@@ -137,11 +136,7 @@ $gutter-horizontal: 6rem;
     border-top-right-radius: 3px;
 
     &--1 {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-secondary-light,
-          $color-grey-dark
-        ),
+      background-image: llinear-gradient(to right bottom, black, rgba(86,181,248,0.8)),
         url(../images/Signup-img.jpg);
       // width: 100%;
     }

@@ -6,7 +6,7 @@ import coursecatalog from "../images/coursecatalog.jpg";
 import multiplediscipline from "../images/multiplediscipline.jpg";
 import freelearning from "../images/freelearning.jpg";
 
-class Instructors extends react.Component {
+class Features extends react.Component {
   render() {
     return (
       <div>
@@ -63,4 +63,4 @@ class Instructors extends react.Component {
   }
 }
 
-export default Instructors;
+export default Features;

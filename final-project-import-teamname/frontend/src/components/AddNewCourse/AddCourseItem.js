@@ -25,19 +25,21 @@ class AddCourseItem extends react.Component {
             name: '',
             description: '',
             category: '',
-            redirect:false
-        
-        }
-        // this.onChangeValue = this.onChangeValue.bind(this);
-        // this.formSubmit = this.formSubmit(this);
-        this.changeHandler = this.changeHandler.bind(this);
+            redirect: false,
+            
 
+        }
+        
     }
 
     changeHandler = name => event => {
-    
+
         this.setState({ [name]: event.target.value });
     };
+
+    setIsOpen = () => {
+        this.state.isOpen = !this.state.isOpen;
+    }
 
     addNewCourse = (e) => {
         e.preventDefault();
@@ -51,9 +53,9 @@ class AddCourseItem extends react.Component {
             category,
             instructor,
             instructorName,
-            
+
         };
-        console.log(course);
+        
         fetch(`http://localhost:9000/app/courses/`, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
@@ -62,7 +64,7 @@ class AddCourseItem extends react.Component {
             .then(response => response.json())
             .then(data => {
 
-                // this.state.redirect = true
+                
                 window.location.reload();
                 console.log(data)
             })
@@ -72,7 +74,7 @@ class AddCourseItem extends react.Component {
     render() {
         const { name, description, category, redirect } = this.state;
 
-        if(redirect){
+        if (redirect) {
             return <Redirect to="/courses"></Redirect>
         }
 
@@ -100,14 +102,12 @@ class AddCourseItem extends react.Component {
                                 <input type="text" name="description" value={description} required onChange={this.changeHandler("description")}></input>
 
                                 <label for="category" className="category">
-                                    <span className="content-category">category</span>
+                                    <span className="content-category">Resource</span>
                                 </label>
                                 <input type="text" name="category" value={category} required onChange={this.changeHandler("category")}></input>
+                                
 
-                                <br></br>
-                                <br></br>
-
-                                <button className="btn-text-blue">Submit</button>
+                                <button className="btn-text-blue">Publish</button>
 
                             </form>
                         </div>

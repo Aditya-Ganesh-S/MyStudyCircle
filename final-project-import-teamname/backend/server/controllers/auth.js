@@ -61,13 +61,3 @@ export default {
     
 }
 
-// exports.signup = (req, res)=>{
-
-//     const promise = authService.findUser();
-//     promise.then((user)=>{
-//         res.status(403).json({
-//             error:"Email is taken"
-//         });
-//     })
-//     .catch()
-// }

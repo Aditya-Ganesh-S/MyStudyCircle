@@ -3,11 +3,15 @@
 .section-Course-container{
     padding: 10rem 0;
     background-image: linear-gradient(to right bottom, rgba(31,31,131,0.8), rgba(86,181,248,0.8)),url('../images/pexels-photo-4143800.jpeg');
+    height: 100vh;
+    background-size: cover;
+    background-position: top;
 }
 
 .section-Course-box{
-    padding:4rem;
+    padding:8rem;
     margin: auto;
+    margin-top:10rem;
     max-width: 55rem;
     background-color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -23,7 +27,7 @@
 
 
 .heading-secondary-Course{
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;

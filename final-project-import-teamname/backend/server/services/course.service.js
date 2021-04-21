@@ -41,12 +41,7 @@ const deleteCourse = (id)=> {
     return promise;
 }
 
-// const deleteLesson = (id)=> {
-//     const promise= Course.lesson.findByIdAndRemove({
-//         _id: id 
-//     }).exec();
-//     return promise;
-// }
+
 
 export default {
     search:search,

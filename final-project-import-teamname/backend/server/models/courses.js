@@ -58,9 +58,6 @@ LessonSchema.virtual('id').get(function () {
 
 const courseModel = mongoose.model('Course', courseSchema);
 
-// export default {
-//     course:courseModel,
-//     lesson:Lesson
-// }
+
 
 export default courseModel;

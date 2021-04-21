@@ -92,24 +92,7 @@ class MyProfileEditForm extends react.Component {
 
                     <br></br>
                     <br></br>
-                    {/* <BecomeInstructor /> */}
-                    {/* <div>
-                        <h1 className="heading-secondary-profile instructor">Do you want to become an Instructor</h1>
-                        <div className="radio-group">
-                            <input type="radio" className="radio-input" id="yes" value="yes" name="instructor" onChange={this.onChangeValue}></input>
-                            <label for="yes" className="radio-label">
-                                <span className="radio-button"></span>
-                        Yes
-                    </label>
-                        </div>
-                        <div className="radio-group">
-                            <input type="radio" className="radio-input" id="no" name="instructor" value="no" onChange={this.onChangeValue}></input>
-                            <label for="no" className="radio-label">
-                                <span className="radio-button"></span>
-                        No
-                    </label>
-                        </div>
-                    </div> */}
+                   
                     <button className="btn-text-blue">Update</button>
 
                 </form>

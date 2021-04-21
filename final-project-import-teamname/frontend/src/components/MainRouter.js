@@ -8,7 +8,6 @@ import Menu from './Navbar/menu'
 import Signin from './LandingLoginComponent/LoginComponent';
 import Signup from './Signup/Signup';
 import PrivateRoute from './auth/PrivateRoute'
-import AddNewCourse from './AddNewCourse/AddNewCourse'
 import addNewItem from './AddNewCourse/AddCourseItem'
 import AdminPage from './Admin/AdminPage';
 import deleteCourse from './Admin/deleteCourse';

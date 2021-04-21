@@ -21,7 +21,7 @@ class SingleCourseCard extends react.Component {
               <div class="card__details">
                 <ul>
                 <li>{this.props.course.description}</li>
-                  <li>{this.props.course.category}</li>
+                  
                   <li>{this.props.course.created.toLocaleString()}</li>
                 </ul>
               </div>
